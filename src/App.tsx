@@ -3,7 +3,7 @@ import './App.css';
 import AddToList from './Components/AddToList';
 import List from './Components/List';
 
-interface peopleData {
+export interface peopleData {
   people:{
     name: string,
     age: number,
@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <h1>Belu-Verse</h1>
       <List people={people}/>
-      <AddToList/>
+      <AddToList people={people} setpeople={setpeople}/>
     </div>
   );
 }
